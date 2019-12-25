@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Upload CSV</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+</head>
+
+<body>
+    <form id="upload">
+        <input type="file" name="file" id="file">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+<script>
+    function submit(e) {
+        e.preventDefault();
+
+        var file = document.getElementById('file').files[0];
+        $("#file").parse({
+            config: {
+                header: true,
+                dynamicTyping: true,
+                complete: function (results) {
+                    formData = results.data;
+                    console.log("Finished Parsing:", results.data);
+                        var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+                        var theUrl = "https://us-central1-phoneguide-dev.cloudfunctions.net/adminAPI/uploadData";
+                        xmlhttp.open("POST", theUrl);
+                        xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+                        xmlhttp.send(JSON.stringify(results.data));
+                }
+            },
+            complete: function () {
+                console.log("All files done!");
+            }
+        });
+    }
+    document.querySelector('#upload').onsubmit = submit;
+</script>
+
+</html>
