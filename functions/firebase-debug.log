@@ -1,0 +1,539 @@
+[debug] [2019-12-26T07:31:16.183Z] ----------------------------------------------------------------------
+[debug] [2019-12-26T07:31:16.185Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Sreejith N S\AppData\Local\Yarn\Data\global\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2019-12-26T07:31:16.185Z] CLI Version:   7.11.0
+[debug] [2019-12-26T07:31:16.185Z] Platform:      win32
+[debug] [2019-12-26T07:31:16.185Z] Node Version:  v12.13.0
+[debug] [2019-12-26T07:31:16.186Z] Time:          Thu Dec 26 2019 13:01:16 GMT+0530 (India Standard Time)
+[debug] [2019-12-26T07:31:16.186Z] ----------------------------------------------------------------------
+[debug] [2019-12-26T07:31:16.186Z] 
+[debug] [2019-12-26T07:31:16.223Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-26T07:31:16.224Z] > authorizing via signed-in user
+[debug] [2019-12-26T07:31:16.224Z] [iam] checking project phoneguide-dev for permissions ["firebase.projects.get"]
+[debug] [2019-12-26T07:31:16.225Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-12-26T07:31:16.225Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-12-26T07:31:16.409Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-26T07:31:16.779Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/phoneguide-dev:testIamPermissions  
+
+[debug] [2019-12-26T07:31:18.227Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-26T07:31:18.228Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/phoneguide-dev  
+ 
+[debug] [2019-12-26T07:31:18.608Z] <<< HTTP RESPONSE 200
+[warn] !  Your requested "node" version "8" doesn't match your global version "12"
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "c:\Users\Sreejith N S\Projects\phoneguide\functions" for Cloud Functions...
+[debug] [2019-12-26T07:31:20.133Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2019-12-26T07:31:20.133Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2019-12-26T07:31:20.133Z] [worker-pool] submitWork(triggerId=)
+[debug] [2019-12-26T07:31:20.134Z] [worker-~diagnostic~-bc753699-b833-41b0-a8bb-c499a545af1f]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\11344
+[debug] [2019-12-26T07:31:20.134Z] [worker-~diagnostic~-bc753699-b833-41b0-a8bb-c499a545af1f]: BUSY
+[debug] [2019-12-26T07:31:20.507Z] [runtime-status] [11344] Functions runtime initialized. {"cwd":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions","node_version":"12.13.0"}
+[debug] [2019-12-26T07:31:20.508Z] [runtime-status] [11344] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-12-26T07:31:20.511Z] [runtime-status] [11344] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-26T07:31:20.512Z] [runtime-status] [11344] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-26T07:31:20.513Z] [runtime-status] [11344] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] +  functions[adminAPI]: http function initialized (http://localhost:5000/phoneguide-dev/us-central1/adminAPI).
+[debug] [2019-12-26T07:31:22.692Z] [worker-~diagnostic~-bc753699-b833-41b0-a8bb-c499a545af1f]: IDLE
+[debug] [2019-12-26T07:33:16.409Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-26T07:33:16.409Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-26T07:33:16.409Z] Accepted request OPTIONS /phoneguide-dev/us-central1/adminAPI/query --> adminAPI
+[debug] [2019-12-26T07:33:16.415Z] [worker-pool] addWorker(adminAPI)
+[debug] [2019-12-26T07:33:16.415Z] [worker-pool] Adding worker with key adminAPI, total=1
+[debug] [2019-12-26T07:33:16.415Z] [worker-pool] submitWork(triggerId=adminAPI)
+[debug] [2019-12-26T07:33:16.415Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\10616
+[debug] [2019-12-26T07:33:16.415Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: BUSY
+[debug] [2019-12-26T07:33:16.751Z] [runtime-status] [10616] Functions runtime initialized. {"cwd":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions","node_version":"12.13.0"}
+[debug] [2019-12-26T07:33:16.752Z] [runtime-status] [10616] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-12-26T07:33:16.755Z] [runtime-status] [10616] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-26T07:33:16.756Z] [runtime-status] [10616] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-26T07:33:16.757Z] [runtime-status] [10616] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-26T07:33:16.950Z] [runtime-status] [10616] Trigger "adminAPI" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "adminAPI"
+[debug] [2019-12-26T07:33:16.951Z] [runtime-status] [10616] triggerDefinition {"httpsTrigger":{},"name":"adminAPI","entryPoint":"adminAPI"}
+[debug] [2019-12-26T07:33:16.951Z] [runtime-status] [10616] Running adminAPI in mode HTTPS
+[debug] [2019-12-26T07:33:16.953Z] [runtime-status] [10616] Attempting to listen to socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\10616
+[debug] [2019-12-26T07:33:16.957Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-26T07:33:16.964Z] [runtime-status] [10616] Ephemeral server handling OPTIONS request
+[debug] [2019-12-26T07:33:16.968Z] [runtime-status] [10616] Ephemeral server survived.
+[debug] [2019-12-26T07:33:16.971Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2019-12-26T07:33:16.971Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2019-12-26T07:33:16.971Z] Accepted request POST /phoneguide-dev/us-central1/adminAPI/query --> adminAPI
+[debug] [2019-12-26T07:33:16.976Z] [worker-pool] addWorker(adminAPI)
+[debug] [2019-12-26T07:33:16.976Z] [worker-pool] Adding worker with key adminAPI, total=2
+[debug] [2019-12-26T07:33:16.976Z] [worker-pool] submitWork(triggerId=adminAPI)
+[debug] [2019-12-26T07:33:16.976Z] [worker-adminAPI-d3c35f61-10b3-4e14-9afc-4c2cf76c00e1]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\4988
+[debug] [2019-12-26T07:33:16.976Z] [worker-adminAPI-d3c35f61-10b3-4e14-9afc-4c2cf76c00e1]: BUSY
+[info] i  functions: Finished "adminAPI" in ~1s
+[debug] [2019-12-26T07:33:16.977Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: IDLE
+[debug] [2019-12-26T07:33:16.978Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-26T07:33:17.300Z] [runtime-status] [4988] Functions runtime initialized. {"cwd":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions","node_version":"12.13.0"}
+[debug] [2019-12-26T07:33:17.300Z] [runtime-status] [4988] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-12-26T07:33:17.304Z] [runtime-status] [4988] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-26T07:33:17.305Z] [runtime-status] [4988] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-26T07:33:17.306Z] [runtime-status] [4988] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-26T07:33:17.501Z] [runtime-status] [4988] Trigger "adminAPI" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "adminAPI"
+[debug] [2019-12-26T07:33:17.502Z] [runtime-status] [4988] triggerDefinition {"httpsTrigger":{},"name":"adminAPI","entryPoint":"adminAPI"}
+[debug] [2019-12-26T07:33:17.502Z] [runtime-status] [4988] Running adminAPI in mode HTTPS
+[debug] [2019-12-26T07:33:17.504Z] [runtime-status] [4988] Attempting to listen to socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\4988
+[debug] [2019-12-26T07:33:17.507Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-26T07:33:18.157Z] [runtime-status] [4988] Ephemeral server handling POST request
+[info] >  Log: performance B
+[info] >  Log: battery B
+[info] >  Log: storage B
+[info] >  Log: rearCamera B
+[info] >  Log: thickness YES
+[info] >  Log: price FLAGSHIP
+[debug] [2019-12-26T07:33:22.822Z] [runtime-status] [4988] Ephemeral server survived.
+[info] i  functions: Finished "adminAPI" in ~1s
+[debug] [2019-12-26T07:33:23.800Z] [worker-adminAPI-d3c35f61-10b3-4e14-9afc-4c2cf76c00e1]: IDLE
+[debug] [2019-12-26T07:33:23.800Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-26T07:45:19.752Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-26T07:45:19.752Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-26T07:45:19.752Z] Accepted request OPTIONS /phoneguide-dev/us-central1/adminAPI/query --> adminAPI
+[debug] [2019-12-26T07:45:19.752Z] [worker-pool] submitWork(triggerId=adminAPI)
+[debug] [2019-12-26T07:45:19.752Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\10616
+[debug] [2019-12-26T07:45:19.752Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: BUSY
+[debug] [2019-12-26T07:45:19.753Z] [runtime-status] [10616] Trigger "adminAPI" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "adminAPI"
+[debug] [2019-12-26T07:45:19.755Z] [runtime-status] [10616] triggerDefinition {"httpsTrigger":{},"name":"adminAPI","entryPoint":"adminAPI"}
+[debug] [2019-12-26T07:45:19.755Z] [runtime-status] [10616] Running adminAPI in mode HTTPS
+[debug] [2019-12-26T07:45:19.755Z] [runtime-status] [10616] Attempting to listen to socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\10616
+[debug] [2019-12-26T07:45:19.757Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-26T07:45:19.759Z] [runtime-status] [10616] Ephemeral server handling OPTIONS request
+[debug] [2019-12-26T07:45:19.760Z] [runtime-status] [10616] Ephemeral server survived.
+[info] i  functions: Finished "adminAPI" in ~1s
+[debug] [2019-12-26T07:45:19.762Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: IDLE
+[debug] [2019-12-26T07:45:19.762Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-26T07:45:19.764Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-26T07:45:19.764Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-26T07:45:19.764Z] Accepted request POST /phoneguide-dev/us-central1/adminAPI/query --> adminAPI
+[debug] [2019-12-26T07:45:19.764Z] [worker-pool] submitWork(triggerId=adminAPI)
+[debug] [2019-12-26T07:45:19.764Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\10616
+[debug] [2019-12-26T07:45:19.764Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: BUSY
+[debug] [2019-12-26T07:45:19.770Z] [runtime-status] [10616] Trigger "adminAPI" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "adminAPI"
+[debug] [2019-12-26T07:45:19.771Z] [runtime-status] [10616] triggerDefinition {"httpsTrigger":{},"name":"adminAPI","entryPoint":"adminAPI"}
+[debug] [2019-12-26T07:45:19.772Z] [runtime-status] [10616] Running adminAPI in mode HTTPS
+[debug] [2019-12-26T07:45:19.772Z] [runtime-status] [10616] Attempting to listen to socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\10616
+[debug] [2019-12-26T07:45:19.773Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-26T07:45:19.789Z] [runtime-status] [10616] Ephemeral server handling POST request
+[info] >  Log: performance B
+[info] >  Log: battery B
+[info] >  Log: storage B
+[info] >  Log: rearCamera B
+[info] >  Log: frontCamera B
+[info] >  Log: thickness YES
+[info] >  Log: price FLAGSHIP
+[debug] [2019-12-26T07:45:20.317Z] [runtime-status] [10616] Ephemeral server survived.
+[info] i  functions: Finished "adminAPI" in ~1s
+[debug] [2019-12-26T07:45:21.269Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: IDLE
+[debug] [2019-12-26T07:45:21.269Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-26T07:57:31.159Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-26T07:57:31.159Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-26T07:57:31.159Z] Accepted request OPTIONS /phoneguide-dev/us-central1/adminAPI/query --> adminAPI
+[debug] [2019-12-26T07:57:31.159Z] [worker-pool] submitWork(triggerId=adminAPI)
+[debug] [2019-12-26T07:57:31.159Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\10616
+[debug] [2019-12-26T07:57:31.159Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: BUSY
+[debug] [2019-12-26T07:57:31.160Z] [runtime-status] [10616] Trigger "adminAPI" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "adminAPI"
+[debug] [2019-12-26T07:57:31.161Z] [runtime-status] [10616] triggerDefinition {"httpsTrigger":{},"name":"adminAPI","entryPoint":"adminAPI"}
+[debug] [2019-12-26T07:57:31.161Z] [runtime-status] [10616] Running adminAPI in mode HTTPS
+[debug] [2019-12-26T07:57:31.161Z] [runtime-status] [10616] Attempting to listen to socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\10616
+[debug] [2019-12-26T07:57:31.163Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-26T07:57:31.165Z] [runtime-status] [10616] Ephemeral server handling OPTIONS request
+[debug] [2019-12-26T07:57:31.166Z] [runtime-status] [10616] Ephemeral server survived.
+[info] i  functions: Finished "adminAPI" in ~1s
+[debug] [2019-12-26T07:57:31.167Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: IDLE
+[debug] [2019-12-26T07:57:31.168Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-26T07:57:31.172Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-26T07:57:31.172Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-26T07:57:31.172Z] Accepted request POST /phoneguide-dev/us-central1/adminAPI/query --> adminAPI
+[debug] [2019-12-26T07:57:31.172Z] [worker-pool] submitWork(triggerId=adminAPI)
+[debug] [2019-12-26T07:57:31.172Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\10616
+[debug] [2019-12-26T07:57:31.172Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: BUSY
+[debug] [2019-12-26T07:57:31.177Z] [runtime-status] [10616] Trigger "adminAPI" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "adminAPI"
+[debug] [2019-12-26T07:57:31.178Z] [runtime-status] [10616] triggerDefinition {"httpsTrigger":{},"name":"adminAPI","entryPoint":"adminAPI"}
+[debug] [2019-12-26T07:57:31.179Z] [runtime-status] [10616] Running adminAPI in mode HTTPS
+[debug] [2019-12-26T07:57:31.179Z] [runtime-status] [10616] Attempting to listen to socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\10616
+[debug] [2019-12-26T07:57:31.180Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-26T07:57:31.183Z] [runtime-status] [10616] Ephemeral server handling POST request
+[info] >  Log: rearCamera B
+[info] >  Log: performance C
+[info] >  Log: storage B
+[info] >  Log: battery B
+[info] >  Log: price BUDGET
+[debug] [2019-12-26T07:57:31.188Z] [runtime-status] [10616] Ephemeral server survived.
+[info] i  functions: Finished "adminAPI" in ~1s
+[debug] [2019-12-26T07:57:31.916Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: IDLE
+[debug] [2019-12-26T07:57:31.917Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-26T07:58:25.799Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-26T07:58:25.799Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-26T07:58:25.799Z] Accepted request OPTIONS /phoneguide-dev/us-central1/adminAPI/query --> adminAPI
+[debug] [2019-12-26T07:58:25.799Z] [worker-pool] submitWork(triggerId=adminAPI)
+[debug] [2019-12-26T07:58:25.799Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\10616
+[debug] [2019-12-26T07:58:25.800Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: BUSY
+[debug] [2019-12-26T07:58:25.800Z] [runtime-status] [10616] Trigger "adminAPI" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "adminAPI"
+[debug] [2019-12-26T07:58:25.801Z] [runtime-status] [10616] triggerDefinition {"httpsTrigger":{},"name":"adminAPI","entryPoint":"adminAPI"}
+[debug] [2019-12-26T07:58:25.801Z] [runtime-status] [10616] Running adminAPI in mode HTTPS
+[debug] [2019-12-26T07:58:25.801Z] [runtime-status] [10616] Attempting to listen to socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\10616
+[debug] [2019-12-26T07:58:25.803Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-26T07:58:25.805Z] [runtime-status] [10616] Ephemeral server handling OPTIONS request
+[debug] [2019-12-26T07:58:25.806Z] [runtime-status] [10616] Ephemeral server survived.
+[info] i  functions: Finished "adminAPI" in ~1s
+[debug] [2019-12-26T07:58:25.807Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: IDLE
+[debug] [2019-12-26T07:58:25.807Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-26T07:58:25.809Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-26T07:58:25.809Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-26T07:58:25.810Z] Accepted request POST /phoneguide-dev/us-central1/adminAPI/query --> adminAPI
+[debug] [2019-12-26T07:58:25.810Z] [worker-pool] submitWork(triggerId=adminAPI)
+[debug] [2019-12-26T07:58:25.810Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\10616
+[debug] [2019-12-26T07:58:25.810Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: BUSY
+[debug] [2019-12-26T07:58:25.818Z] [runtime-status] [10616] Trigger "adminAPI" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "adminAPI"
+[debug] [2019-12-26T07:58:25.819Z] [runtime-status] [10616] triggerDefinition {"httpsTrigger":{},"name":"adminAPI","entryPoint":"adminAPI"}
+[debug] [2019-12-26T07:58:25.819Z] [runtime-status] [10616] Running adminAPI in mode HTTPS
+[debug] [2019-12-26T07:58:25.820Z] [runtime-status] [10616] Attempting to listen to socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\10616
+[debug] [2019-12-26T07:58:25.821Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-26T07:58:25.824Z] [runtime-status] [10616] Ephemeral server handling POST request
+[info] >  Log: rearCamera B
+[debug] [2019-12-26T07:58:25.825Z] [runtime-status] [10616] Ephemeral server survived.
+[info] >  Log: performance B
+[info] >  Log: storage B
+[info] >  Log: battery B
+[info] >  Log: thickness YES
+[info] >  Log: price BUDGET
+[info] >  No matching documents.
+[info] i  functions: Finished "adminAPI" in ~1s
+[debug] [2019-12-26T07:58:26.247Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: IDLE
+[debug] [2019-12-26T07:58:26.247Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-26T08:01:51.899Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-26T08:01:51.899Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-26T08:01:51.899Z] Accepted request OPTIONS /phoneguide-dev/us-central1/adminAPI/query --> adminAPI
+[debug] [2019-12-26T08:01:51.899Z] [worker-pool] submitWork(triggerId=adminAPI)
+[debug] [2019-12-26T08:01:51.900Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\10616
+[debug] [2019-12-26T08:01:51.900Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: BUSY
+[debug] [2019-12-26T08:01:51.900Z] [runtime-status] [10616] Trigger "adminAPI" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "adminAPI"
+[debug] [2019-12-26T08:01:51.901Z] [runtime-status] [10616] triggerDefinition {"httpsTrigger":{},"name":"adminAPI","entryPoint":"adminAPI"}
+[debug] [2019-12-26T08:01:51.901Z] [runtime-status] [10616] Running adminAPI in mode HTTPS
+[debug] [2019-12-26T08:01:51.902Z] [runtime-status] [10616] Attempting to listen to socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\10616
+[debug] [2019-12-26T08:01:51.906Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-26T08:01:51.909Z] [runtime-status] [10616] Ephemeral server handling OPTIONS request
+[debug] [2019-12-26T08:01:51.910Z] [runtime-status] [10616] Ephemeral server survived.
+[info] i  functions: Finished "adminAPI" in ~1s
+[debug] [2019-12-26T08:01:51.911Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: IDLE
+[debug] [2019-12-26T08:01:51.911Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-26T08:01:51.913Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-26T08:01:51.913Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-26T08:01:51.913Z] Accepted request POST /phoneguide-dev/us-central1/adminAPI/query --> adminAPI
+[debug] [2019-12-26T08:01:51.914Z] [worker-pool] submitWork(triggerId=adminAPI)
+[debug] [2019-12-26T08:01:51.914Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\10616
+[debug] [2019-12-26T08:01:51.914Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: BUSY
+[debug] [2019-12-26T08:01:51.921Z] [runtime-status] [10616] Trigger "adminAPI" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "adminAPI"
+[debug] [2019-12-26T08:01:51.923Z] [runtime-status] [10616] triggerDefinition {"httpsTrigger":{},"name":"adminAPI","entryPoint":"adminAPI"}
+[debug] [2019-12-26T08:01:51.923Z] [runtime-status] [10616] Running adminAPI in mode HTTPS
+[debug] [2019-12-26T08:01:51.923Z] [runtime-status] [10616] Attempting to listen to socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\10616
+[debug] [2019-12-26T08:01:51.924Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-26T08:01:51.927Z] [runtime-status] [10616] Ephemeral server handling POST request
+[info] >  Log: rearCamera B
+[debug] [2019-12-26T08:01:51.928Z] [runtime-status] [10616] Ephemeral server survived.
+[info] >  Log: frontCamera B
+[info] >  Log: performance B
+[info] >  Log: storage B
+[info] >  Log: battery A
+[info] >  Log: thickness YES
+[info] >  Log: price FLAGSHIP
+[info] >  No matching documents.
+[info] i  functions: Finished "adminAPI" in ~1s
+[debug] [2019-12-26T08:01:52.565Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: IDLE
+[debug] [2019-12-26T08:01:52.565Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-26T08:04:05.026Z] File c:\Users\Sreejith N S\Projects\phoneguide\functions\index.js changed, reloading triggers
+[debug] [2019-12-26T08:04:06.029Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2019-12-26T08:04:06.029Z] [worker-~diagnostic~-bc753699-b833-41b0-a8bb-c499a545af1f]: FINISHING
+[debug] [2019-12-26T08:04:06.029Z] [worker-pool] Shutting down IDLE worker (adminAPI)
+[debug] [2019-12-26T08:04:06.029Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: FINISHING
+[debug] [2019-12-26T08:04:06.029Z] [worker-pool] Shutting down IDLE worker (adminAPI)
+[debug] [2019-12-26T08:04:06.029Z] [worker-adminAPI-d3c35f61-10b3-4e14-9afc-4c2cf76c00e1]: FINISHING
+[debug] [2019-12-26T08:04:06.040Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2019-12-26T08:04:06.040Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2019-12-26T08:04:06.041Z] [worker-pool] submitWork(triggerId=)
+[debug] [2019-12-26T08:04:06.041Z] [worker-~diagnostic~-772c02b6-e5d0-4625-9067-3be53554afc8]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\12772
+[debug] [2019-12-26T08:04:06.041Z] [worker-~diagnostic~-772c02b6-e5d0-4625-9067-3be53554afc8]: BUSY
+[debug] [2019-12-26T08:04:06.043Z] [worker-~diagnostic~-bc753699-b833-41b0-a8bb-c499a545af1f]: exited
+[debug] [2019-12-26T08:04:06.043Z] [worker-~diagnostic~-bc753699-b833-41b0-a8bb-c499a545af1f]: FINISHED
+[debug] [2019-12-26T08:04:06.044Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: exited
+[debug] [2019-12-26T08:04:06.044Z] [worker-adminAPI-ec756345-acf1-4c8f-b64a-e97fff60c720]: FINISHED
+[debug] [2019-12-26T08:04:06.045Z] [worker-adminAPI-d3c35f61-10b3-4e14-9afc-4c2cf76c00e1]: exited
+[debug] [2019-12-26T08:04:06.045Z] [worker-adminAPI-d3c35f61-10b3-4e14-9afc-4c2cf76c00e1]: FINISHED
+[debug] [2019-12-26T08:04:07.188Z] [runtime-status] [12772] Functions runtime initialized. {"cwd":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions","node_version":"12.13.0"}
+[debug] [2019-12-26T08:04:07.189Z] [runtime-status] [12772] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-12-26T08:04:07.193Z] [runtime-status] [12772] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-26T08:04:07.194Z] [runtime-status] [12772] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-26T08:04:07.195Z] [runtime-status] [12772] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-26T08:04:07.411Z] [worker-~diagnostic~-772c02b6-e5d0-4625-9067-3be53554afc8]: IDLE
+[debug] [2019-12-26T13:47:01.004Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-26T13:47:01.004Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-26T13:47:01.005Z] Accepted request OPTIONS /phoneguide-dev/us-central1/adminAPI/query --> adminAPI
+[debug] [2019-12-26T13:47:01.005Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2019-12-26T13:47:01.005Z] [worker-pool] Cleaned up workers for adminAPI: 2 --> 0
+[debug] [2019-12-26T13:47:01.150Z] [worker-pool] addWorker(adminAPI)
+[debug] [2019-12-26T13:47:01.150Z] [worker-pool] Adding worker with key adminAPI, total=1
+[debug] [2019-12-26T13:47:01.151Z] [worker-pool] submitWork(triggerId=adminAPI)
+[debug] [2019-12-26T13:47:01.151Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\7528
+[debug] [2019-12-26T13:47:01.151Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: BUSY
+[debug] [2019-12-26T13:47:02.300Z] [runtime-status] [7528] Functions runtime initialized. {"cwd":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions","node_version":"12.13.0"}
+[debug] [2019-12-26T13:47:02.301Z] [runtime-status] [7528] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-12-26T13:47:02.304Z] [runtime-status] [7528] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-26T13:47:02.306Z] [runtime-status] [7528] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-26T13:47:02.306Z] [runtime-status] [7528] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-26T13:47:02.509Z] [runtime-status] [7528] Trigger "adminAPI" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "adminAPI"
+[debug] [2019-12-26T13:47:02.510Z] [runtime-status] [7528] triggerDefinition {"httpsTrigger":{},"name":"adminAPI","entryPoint":"adminAPI"}
+[debug] [2019-12-26T13:47:02.511Z] [runtime-status] [7528] Running adminAPI in mode HTTPS
+[debug] [2019-12-26T13:47:02.513Z] [runtime-status] [7528] Attempting to listen to socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\7528
+[debug] [2019-12-26T13:47:02.516Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-26T13:47:02.572Z] [runtime-status] [7528] Ephemeral server handling OPTIONS request
+[debug] [2019-12-26T13:47:02.575Z] [runtime-status] [7528] Ephemeral server survived.
+[debug] [2019-12-26T13:47:02.579Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2019-12-26T13:47:02.579Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2019-12-26T13:47:02.579Z] Accepted request POST /phoneguide-dev/us-central1/adminAPI/query --> adminAPI
+[debug] [2019-12-26T13:47:02.584Z] [worker-pool] addWorker(adminAPI)
+[debug] [2019-12-26T13:47:02.584Z] [worker-pool] Adding worker with key adminAPI, total=2
+[debug] [2019-12-26T13:47:02.584Z] [worker-pool] submitWork(triggerId=adminAPI)
+[debug] [2019-12-26T13:47:02.585Z] [worker-adminAPI-d191c5ab-0808-447d-ab7d-d954dcd24386]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\17784
+[debug] [2019-12-26T13:47:02.585Z] [worker-adminAPI-d191c5ab-0808-447d-ab7d-d954dcd24386]: BUSY
+[info] i  functions: Finished "adminAPI" in ~1s
+[debug] [2019-12-26T13:47:02.586Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: IDLE
+[debug] [2019-12-26T13:47:02.586Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-26T13:47:02.942Z] [runtime-status] [17784] Functions runtime initialized. {"cwd":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions","node_version":"12.13.0"}
+[debug] [2019-12-26T13:47:02.943Z] [runtime-status] [17784] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-12-26T13:47:02.947Z] [runtime-status] [17784] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-26T13:47:02.949Z] [runtime-status] [17784] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-26T13:47:02.949Z] [runtime-status] [17784] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"c:\\Users\\Sreejith N S\\Projects\\phoneguide\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-26T13:47:03.153Z] [runtime-status] [17784] Trigger "adminAPI" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "adminAPI"
+[debug] [2019-12-26T13:47:03.154Z] [runtime-status] [17784] triggerDefinition {"httpsTrigger":{},"name":"adminAPI","entryPoint":"adminAPI"}
+[debug] [2019-12-26T13:47:03.154Z] [runtime-status] [17784] Running adminAPI in mode HTTPS
+[debug] [2019-12-26T13:47:03.156Z] [runtime-status] [17784] Attempting to listen to socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\17784
+[debug] [2019-12-26T13:47:03.159Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-26T13:47:03.179Z] [runtime-status] [17784] Ephemeral server handling POST request
+[info] >  Log: rearCamera B
+[info] >  Log: performance B
+[info] >  Log: storage B
+[info] >  Log: battery A
+[info] >  Log: frontCamera B
+[info] >  Log: thickness YES
+[info] >  Log: price FLAGSHIP
+[debug] [2019-12-26T13:47:03.578Z] [runtime-status] [17784] Ephemeral server survived.
+[info] >  No matching documents.
+[info] i  functions: Finished "adminAPI" in ~2s
+[debug] [2019-12-26T13:47:05.210Z] [worker-adminAPI-d191c5ab-0808-447d-ab7d-d954dcd24386]: IDLE
+[debug] [2019-12-26T13:47:05.210Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-26T14:13:41.547Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-26T14:13:41.547Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-26T14:13:41.547Z] Accepted request OPTIONS /phoneguide-dev/us-central1/adminAPI/query --> adminAPI
+[debug] [2019-12-26T14:13:41.547Z] [worker-pool] submitWork(triggerId=adminAPI)
+[debug] [2019-12-26T14:13:41.547Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\7528
+[debug] [2019-12-26T14:13:41.547Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: BUSY
+[debug] [2019-12-26T14:13:41.548Z] [runtime-status] [7528] Trigger "adminAPI" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "adminAPI"
+[debug] [2019-12-26T14:13:41.550Z] [runtime-status] [7528] triggerDefinition {"httpsTrigger":{},"name":"adminAPI","entryPoint":"adminAPI"}
+[debug] [2019-12-26T14:13:41.550Z] [runtime-status] [7528] Running adminAPI in mode HTTPS
+[debug] [2019-12-26T14:13:41.550Z] [runtime-status] [7528] Attempting to listen to socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\7528
+[debug] [2019-12-26T14:13:41.553Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-26T14:13:41.555Z] [runtime-status] [7528] Ephemeral server handling OPTIONS request
+[debug] [2019-12-26T14:13:41.556Z] [runtime-status] [7528] Ephemeral server survived.
+[info] i  functions: Finished "adminAPI" in ~1s
+[debug] [2019-12-26T14:13:41.558Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: IDLE
+[debug] [2019-12-26T14:13:41.558Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-26T14:13:41.560Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-26T14:13:41.560Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-26T14:13:41.560Z] Accepted request POST /phoneguide-dev/us-central1/adminAPI/query --> adminAPI
+[debug] [2019-12-26T14:13:41.560Z] [worker-pool] submitWork(triggerId=adminAPI)
+[debug] [2019-12-26T14:13:41.560Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\7528
+[debug] [2019-12-26T14:13:41.560Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: BUSY
+[debug] [2019-12-26T14:13:41.569Z] [runtime-status] [7528] Trigger "adminAPI" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "adminAPI"
+[debug] [2019-12-26T14:13:41.571Z] [runtime-status] [7528] triggerDefinition {"httpsTrigger":{},"name":"adminAPI","entryPoint":"adminAPI"}
+[debug] [2019-12-26T14:13:41.571Z] [runtime-status] [7528] Running adminAPI in mode HTTPS
+[debug] [2019-12-26T14:13:41.571Z] [runtime-status] [7528] Attempting to listen to socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\7528
+[debug] [2019-12-26T14:13:41.572Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-26T14:13:41.588Z] [runtime-status] [7528] Ephemeral server handling POST request
+[info] >  Log: performance B
+[info] >  Log: battery A
+[info] >  Log: storage B
+[info] >  Log: rearCamera B
+[info] >  Log: frontCamera B
+[info] >  Log: thickness YES
+[info] >  Log: price FLAGSHIP
+[debug] [2019-12-26T14:13:42.367Z] [runtime-status] [7528] Ephemeral server survived.
+[info] >  No matching documents.
+[info] i  functions: Finished "adminAPI" in ~1s
+[debug] [2019-12-26T14:13:43.396Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: IDLE
+[debug] [2019-12-26T14:13:43.396Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-26T14:48:16.608Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-26T14:48:16.609Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-26T14:48:16.609Z] Accepted request OPTIONS /phoneguide-dev/us-central1/adminAPI/query --> adminAPI
+[debug] [2019-12-26T14:48:16.609Z] [worker-pool] submitWork(triggerId=adminAPI)
+[debug] [2019-12-26T14:48:16.610Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\7528
+[debug] [2019-12-26T14:48:16.610Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: BUSY
+[debug] [2019-12-26T14:48:16.611Z] [runtime-status] [7528] Trigger "adminAPI" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "adminAPI"
+[debug] [2019-12-26T14:48:16.613Z] [runtime-status] [7528] triggerDefinition {"httpsTrigger":{},"name":"adminAPI","entryPoint":"adminAPI"}
+[debug] [2019-12-26T14:48:16.613Z] [runtime-status] [7528] Running adminAPI in mode HTTPS
+[debug] [2019-12-26T14:48:16.613Z] [runtime-status] [7528] Attempting to listen to socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\7528
+[debug] [2019-12-26T14:48:16.616Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-26T14:48:16.619Z] [runtime-status] [7528] Ephemeral server handling OPTIONS request
+[debug] [2019-12-26T14:48:16.620Z] [runtime-status] [7528] Ephemeral server survived.
+[info] i  functions: Finished "adminAPI" in ~1s
+[debug] [2019-12-26T14:48:16.621Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: IDLE
+[debug] [2019-12-26T14:48:16.622Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-26T14:48:16.681Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-26T14:48:16.682Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-26T14:48:16.682Z] Accepted request POST /phoneguide-dev/us-central1/adminAPI/query --> adminAPI
+[debug] [2019-12-26T14:48:16.682Z] [worker-pool] submitWork(triggerId=adminAPI)
+[debug] [2019-12-26T14:48:16.682Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\7528
+[debug] [2019-12-26T14:48:16.682Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: BUSY
+[debug] [2019-12-26T14:48:16.682Z] [runtime-status] [7528] Trigger "adminAPI" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "adminAPI"
+[debug] [2019-12-26T14:48:16.683Z] [runtime-status] [7528] triggerDefinition {"httpsTrigger":{},"name":"adminAPI","entryPoint":"adminAPI"}
+[debug] [2019-12-26T14:48:16.683Z] [runtime-status] [7528] Running adminAPI in mode HTTPS
+[debug] [2019-12-26T14:48:16.684Z] [runtime-status] [7528] Attempting to listen to socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\7528
+[debug] [2019-12-26T14:48:16.685Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-26T14:48:16.714Z] [runtime-status] [7528] Ephemeral server handling POST request
+[info] >  Log: performance B
+[info] >  Log: battery A
+[info] >  Log: storage B
+[info] >  Log: rearCamera B
+[info] >  Log: frontCamera B
+[info] >  Log: thickness YES
+[info] >  Log: price FLAGSHIP
+[debug] [2019-12-26T14:48:16.721Z] [runtime-status] [7528] Ephemeral server survived.
+[info] >  No matching documents.
+[info] i  functions: Finished "adminAPI" in ~1s
+[debug] [2019-12-26T14:48:18.189Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: IDLE
+[debug] [2019-12-26T14:48:18.190Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-26T14:54:12.279Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-26T14:54:12.279Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-26T14:54:12.279Z] Accepted request OPTIONS /phoneguide-dev/us-central1/adminAPI/query --> adminAPI
+[debug] [2019-12-26T14:54:12.279Z] [worker-pool] submitWork(triggerId=adminAPI)
+[debug] [2019-12-26T14:54:12.279Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\7528
+[debug] [2019-12-26T14:54:12.279Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: BUSY
+[debug] [2019-12-26T14:54:12.280Z] [runtime-status] [7528] Trigger "adminAPI" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "adminAPI"
+[debug] [2019-12-26T14:54:12.281Z] [runtime-status] [7528] triggerDefinition {"httpsTrigger":{},"name":"adminAPI","entryPoint":"adminAPI"}
+[debug] [2019-12-26T14:54:12.281Z] [runtime-status] [7528] Running adminAPI in mode HTTPS
+[debug] [2019-12-26T14:54:12.281Z] [runtime-status] [7528] Attempting to listen to socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\7528
+[debug] [2019-12-26T14:54:12.283Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-26T14:54:12.286Z] [runtime-status] [7528] Ephemeral server handling OPTIONS request
+[debug] [2019-12-26T14:54:12.288Z] [runtime-status] [7528] Ephemeral server survived.
+[info] i  functions: Finished "adminAPI" in ~1s
+[debug] [2019-12-26T14:54:12.290Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: IDLE
+[debug] [2019-12-26T14:54:12.290Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-26T14:54:12.292Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-26T14:54:12.292Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-26T14:54:12.292Z] Accepted request POST /phoneguide-dev/us-central1/adminAPI/query --> adminAPI
+[debug] [2019-12-26T14:54:12.292Z] [worker-pool] submitWork(triggerId=adminAPI)
+[debug] [2019-12-26T14:54:12.292Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\7528
+[debug] [2019-12-26T14:54:12.292Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: BUSY
+[debug] [2019-12-26T14:54:12.301Z] [runtime-status] [7528] Trigger "adminAPI" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "adminAPI"
+[debug] [2019-12-26T14:54:12.303Z] [runtime-status] [7528] triggerDefinition {"httpsTrigger":{},"name":"adminAPI","entryPoint":"adminAPI"}
+[debug] [2019-12-26T14:54:12.303Z] [runtime-status] [7528] Running adminAPI in mode HTTPS
+[debug] [2019-12-26T14:54:12.303Z] [runtime-status] [7528] Attempting to listen to socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\7528
+[debug] [2019-12-26T14:54:12.404Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-26T14:54:12.406Z] [runtime-status] [7528] Ephemeral server handling POST request
+[info] >  Log: performance B
+[debug] [2019-12-26T14:54:12.408Z] [runtime-status] [7528] Ephemeral server survived.
+[info] >  Log: battery B
+[info] >  Log: storage B
+[info] >  Log: rearCamera B
+[info] >  Log: price FLAGSHIP
+[info] i  functions: Finished "adminAPI" in ~1s
+[debug] [2019-12-26T14:54:13.457Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: IDLE
+[debug] [2019-12-26T14:54:13.457Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-26T14:54:30.304Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-26T14:54:30.304Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-26T14:54:30.305Z] Accepted request OPTIONS /phoneguide-dev/us-central1/adminAPI/query --> adminAPI
+[debug] [2019-12-26T14:54:30.305Z] [worker-pool] submitWork(triggerId=adminAPI)
+[debug] [2019-12-26T14:54:30.305Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\7528
+[debug] [2019-12-26T14:54:30.305Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: BUSY
+[debug] [2019-12-26T14:54:30.305Z] [runtime-status] [7528] Trigger "adminAPI" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "adminAPI"
+[debug] [2019-12-26T14:54:30.307Z] [runtime-status] [7528] triggerDefinition {"httpsTrigger":{},"name":"adminAPI","entryPoint":"adminAPI"}
+[debug] [2019-12-26T14:54:30.307Z] [runtime-status] [7528] Running adminAPI in mode HTTPS
+[debug] [2019-12-26T14:54:30.307Z] [runtime-status] [7528] Attempting to listen to socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\7528
+[debug] [2019-12-26T14:54:30.310Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-26T14:54:30.312Z] [runtime-status] [7528] Ephemeral server handling OPTIONS request
+[debug] [2019-12-26T14:54:30.313Z] [runtime-status] [7528] Ephemeral server survived.
+[info] i  functions: Finished "adminAPI" in ~1s
+[debug] [2019-12-26T14:54:30.314Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: IDLE
+[debug] [2019-12-26T14:54:30.314Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-26T14:54:30.316Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-26T14:54:30.317Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-26T14:54:30.317Z] Accepted request POST /phoneguide-dev/us-central1/adminAPI/query --> adminAPI
+[debug] [2019-12-26T14:54:30.317Z] [worker-pool] submitWork(triggerId=adminAPI)
+[debug] [2019-12-26T14:54:30.317Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\7528
+[debug] [2019-12-26T14:54:30.317Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: BUSY
+[debug] [2019-12-26T14:54:30.323Z] [runtime-status] [7528] Trigger "adminAPI" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "adminAPI"
+[debug] [2019-12-26T14:54:30.324Z] [runtime-status] [7528] triggerDefinition {"httpsTrigger":{},"name":"adminAPI","entryPoint":"adminAPI"}
+[debug] [2019-12-26T14:54:30.324Z] [runtime-status] [7528] Running adminAPI in mode HTTPS
+[debug] [2019-12-26T14:54:30.325Z] [runtime-status] [7528] Attempting to listen to socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\7528
+[debug] [2019-12-26T14:54:30.327Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-26T14:54:30.330Z] [runtime-status] [7528] Ephemeral server handling POST request
+[info] >  Log: rearCamera B
+[debug] [2019-12-26T14:54:30.331Z] [runtime-status] [7528] Ephemeral server survived.
+[info] >  Log: performance A
+[info] >  Log: storage B
+[info] >  Log: battery A
+[info] >  Log: thickness YES
+[info] >  Log: price FLAGSHIP
+[info] >  No matching documents.
+[info] i  functions: Finished "adminAPI" in ~1s
+[debug] [2019-12-26T14:54:30.790Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: IDLE
+[debug] [2019-12-26T14:54:30.790Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-26T15:00:24.545Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-26T15:00:24.545Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-26T15:00:24.545Z] Accepted request OPTIONS /phoneguide-dev/us-central1/adminAPI/query --> adminAPI
+[debug] [2019-12-26T15:00:24.545Z] [worker-pool] submitWork(triggerId=adminAPI)
+[debug] [2019-12-26T15:00:24.545Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\7528
+[debug] [2019-12-26T15:00:24.545Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: BUSY
+[debug] [2019-12-26T15:00:24.546Z] [runtime-status] [7528] Trigger "adminAPI" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "adminAPI"
+[debug] [2019-12-26T15:00:24.547Z] [runtime-status] [7528] triggerDefinition {"httpsTrigger":{},"name":"adminAPI","entryPoint":"adminAPI"}
+[debug] [2019-12-26T15:00:24.547Z] [runtime-status] [7528] Running adminAPI in mode HTTPS
+[debug] [2019-12-26T15:00:24.548Z] [runtime-status] [7528] Attempting to listen to socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\7528
+[debug] [2019-12-26T15:00:24.549Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-26T15:00:24.551Z] [runtime-status] [7528] Ephemeral server handling OPTIONS request
+[debug] [2019-12-26T15:00:24.552Z] [runtime-status] [7528] Ephemeral server survived.
+[info] i  functions: Finished "adminAPI" in ~1s
+[debug] [2019-12-26T15:00:24.554Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: IDLE
+[debug] [2019-12-26T15:00:24.554Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-26T15:00:24.556Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-26T15:00:24.556Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-26T15:00:24.557Z] Accepted request POST /phoneguide-dev/us-central1/adminAPI/query --> adminAPI
+[debug] [2019-12-26T15:00:24.557Z] [worker-pool] submitWork(triggerId=adminAPI)
+[debug] [2019-12-26T15:00:24.557Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: Assigning socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\7528
+[debug] [2019-12-26T15:00:24.557Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: BUSY
+[debug] [2019-12-26T15:00:24.563Z] [runtime-status] [7528] Trigger "adminAPI" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "adminAPI"
+[debug] [2019-12-26T15:00:24.565Z] [runtime-status] [7528] triggerDefinition {"httpsTrigger":{},"name":"adminAPI","entryPoint":"adminAPI"}
+[debug] [2019-12-26T15:00:24.565Z] [runtime-status] [7528] Running adminAPI in mode HTTPS
+[debug] [2019-12-26T15:00:24.565Z] [runtime-status] [7528] Attempting to listen to socketPath: \\?\pipe\c:\Users\Sreejith N S\Projects\phoneguide\functions\7528
+[debug] [2019-12-26T15:00:24.566Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-26T15:00:24.569Z] [runtime-status] [7528] Ephemeral server handling POST request
+[info] >  Log: performance B
+[debug] [2019-12-26T15:00:24.571Z] [runtime-status] [7528] Ephemeral server survived.
+[info] >  Log: battery B
+[info] >  Log: storage B
+[info] >  Log: rearCamera B
+[info] >  Log: thickness YES
+[info] >  Log: price FLAGSHIP
+[info] i  functions: Finished "adminAPI" in ~1s
+[debug] [2019-12-26T15:00:25.875Z] [worker-adminAPI-5d54fea0-c3fe-469f-8cc1-4bfc5e37f3a0]: IDLE
+[debug] [2019-12-26T15:00:25.875Z] [work-queue] {"queueLength":0,"workRunningCount":0}

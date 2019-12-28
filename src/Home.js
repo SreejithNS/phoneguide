@@ -61,7 +61,7 @@ export default function Home(props) {
         </AppBar>
       </ElevationScroll>
       <Toolbar />
-      <Container>
+      <Container style={{height:100+"%"}}>
         <Questions/>
       </Container>
     </React.Fragment>

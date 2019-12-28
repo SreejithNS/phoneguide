@@ -189,6 +189,22 @@ export default class Questions extends Component {
                         }
                     ]
                 },
+                {
+                    question: "Which type of phone lover are you?",
+                    id: "a11",
+                    options: [
+                        {
+                            text: "Flagship",
+                            id: "o1",
+                            attr: { pr: 'FLAGSHIP' }
+                        },
+                        {
+                            text: "Midrange",
+                            id: "o2",
+                            attr: {pr:'BUDGET'}
+                        }
+                    ]
+                },
                 // {
                 //     question: "No matter what the internal sotrage is you always feel like using an extra memeory card?",
                 //     id: "a10",
@@ -232,7 +248,8 @@ export default class Questions extends Component {
     sendQuery = () => {
         const query = Array.from(this.state.queryParams)
         var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
-        var theUrl = "https://us-central1-phoneguide-dev.cloudfunctions.net/adminAPI/query";
+        var theUrl = "http://localhost:5000/phoneguide-dev/us-central1/adminAPI/query";
+        //var theUrl = "https://us-central1-phoneguide-dev.cloudfunctions.net/adminAPI/query";
         xmlhttp.open("POST", theUrl);
         xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xmlhttp.send(JSON.stringify(query));
