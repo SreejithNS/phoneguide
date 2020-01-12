@@ -19,8 +19,8 @@ export default function Home(props) {
 
 
       <div className="footer">
-        <Link to="/"><a href="/">TWOMINUTEPHONES.COM</a></Link>
-        <Link to="/aboutus"><a href="#d">ABOUT US</a></Link>
+        <Link to="/"><span href="/">TWOMINUTEPHONES.COM</span></Link>
+        <Link to="/aboutus"><span href="#d">ABOUT US</span></Link>
       </div>
       </Router>
     </React.Fragment >

@@ -40,6 +40,7 @@ class PaperCard extends Component {
           <Grid item className={classes.question}>{question.question}</Grid>
           <Grid item container direction="column" justify="space-evenly" alignItems="center">
             <form style={{ width: "100%",transition:"all 0.2s cubic-bezier(1, -0.01, 0.58, 1) 0s" }}>
+            {question.check>1? <div item className={classes.hint}>Select {question.check} options</div>:""}
               {(!loader.load)?question.options.map((opt, key) => (
                 <Grid item key={key} id={question.id + opt.id} className={classes.option} style={selected.indexOf(opt.id)>-1? { backgroundColor: "#55efc4", border: "1px solid #00000000", color: "#282828"} : {}}>
                   <label className="btn-radio">
@@ -81,7 +82,7 @@ export default withStyles((theme) => {
       position: 'absolute',
       // textAlign: 'center',
       boxShadow: "10px 10px 20px 4px rgba(0, 0, 0, 0.17)",
-      width: "90%",
+      width: "100%",
       left: "50%",
       top: '16px',
       borderRadius: "12px",
@@ -89,9 +90,15 @@ export default withStyles((theme) => {
       maxWidth: "600px"
     },
     question: {
-      fontSize: "2.1em",
+      fontSize: "1.9em",
       letterSpacing: "-1px",
       color: "#282828e0",
+      width: 100 + "%"
+    },
+    hint: {
+      fontSize: "1.3em",
+      letterSpacing: "-1px",
+      color: "#282828aa",
       width: 100 + "%"
     },
     cardContent: {

@@ -29,7 +29,7 @@ body, html {
     font-family: 'Open Sans Condensed', sans-serif;
     text-align: center;
 }
-.footer > a{
+.footer span{
   margin: 0px 12px;
 }
 

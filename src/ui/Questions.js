@@ -110,11 +110,6 @@ export default class Questions extends Component {
                             attr: { re: 3, pe: 2, st: 3, ba: 3 }
                         },
                         {
-                            text: "Videos",
-                            id: "o3",
-                            attr: { re: 2, fr: 2, pe: 2, st: 3, ba: 3 }
-                        },
-                        {
                             text: "Social Media",
                             id: "o4",
                             attr: { re: 3, pe: 2, st: 3 }
@@ -304,6 +299,7 @@ export default class Questions extends Component {
         //var url = "http://localhost:5000/phoneguide-dev/us-central1/adminAPI/query";
         //var url = "https://us-central1-phoneguide-dev.cloudfunctions.net/adminAPI/query";
         var url = "https://us-central1-twominutephones.cloudfunctions.net/adminAPI/query";
+        //var url = "http://localhost:5000/twominutephones/us-central1/adminAPI/query"
         xmlhttp.open("POST", url);
         xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xmlhttp.send(JSON.stringify(query));
@@ -368,6 +364,7 @@ export default class Questions extends Component {
             this.setState({
                 skipBasics:true,
                 questions:[],
+                phones:[...phones.splice(0,3)],
                 showMatch:true
             })
         }
