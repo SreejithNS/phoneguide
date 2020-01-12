@@ -1,0 +1,37 @@
+.aboutus-card {
+    padding: 16px;
+    background: white;
+    border-radius: 16px;
+    min-width: 300px;
+    max-width: 600px;
+    box-shadow: 6px 6px 12px -6px #000000a8;
+}
+.aboutus-title{
+    font-family: 'Rubik', sans-serif;
+    font-size: 2em;
+}
+.aboutus-description{
+    font-style: italic;
+    color: #000000ad;
+    font-family: serif;
+    text-align: center;
+}
+.aboutus-people-l{
+    margin-top: 8px;
+    display: inline-block;
+    vertical-align:-5px;
+}
+.aboutus-logo{
+    margin-right: 12px;
+    height:100px;
+}
+.aboutus-people-r{
+font-style: italic;
+color: #000000ad;
+font-family: serif;
+text-align: center;
+}
+
+.aboutus-people-l svg{
+    margin-right: 4px;
+}

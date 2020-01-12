@@ -301,8 +301,9 @@ export default class Questions extends Component {
     sendQuery = (isLastQuestion, callback) => {
         const query = Array.from(this.state.queryParams)
         var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
-        var url = "http://localhost:5000/phoneguide-dev/us-central1/adminAPI/query";
+        //var url = "http://localhost:5000/phoneguide-dev/us-central1/adminAPI/query";
         //var url = "https://us-central1-phoneguide-dev.cloudfunctions.net/adminAPI/query";
+        var url = "https://us-central1-twominutephones.cloudfunctions.net/adminAPI/query";
         xmlhttp.open("POST", url);
         xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xmlhttp.send(JSON.stringify(query));
@@ -322,16 +323,14 @@ export default class Questions extends Component {
         })
     }
     dynamicQuestions = () => {
-        const { questions, noMatch, phones, skipBasics, dynamicQuestions, questionLoad } = this.state;
+        const { questions, noMatch, phones, skipBasics, dynamicQuestions} = this.state;
         if (dynamicQuestions.questions.length === 0 && phones.length) {
-            console.log("No questions left");
             this.setState({
                 showMatch: true,
             })
             return;
         }
         if (dynamicQuestions.questions.length === 0 && phones.length === 0) {
-            console.log("No questions and no phones available");
             this.setState({
                 noMatch: true
             })
@@ -343,7 +342,6 @@ export default class Questions extends Component {
             phones.length > 1 &&
             !skipBasics
         ) {
-            console.log("Case: After basic question still with more than one phone")
             let question = dynamicQuestions.questions.pop()
             this.setState((state) => {
                 return {
@@ -357,7 +355,6 @@ export default class Questions extends Component {
             !noMatch &&
             skipBasics
         ) {
-            console.log("Case: Zero match between basic questions")
             let question = dynamicQuestions.questions.pop()
             this.setState((state) => {
                 return {

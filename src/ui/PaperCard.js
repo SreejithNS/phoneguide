@@ -74,7 +74,6 @@ class PaperCard extends Component {
 }
 
 export default withStyles((theme) => {
-  console.log(theme)
   return createStyles({
     root: {
       backgroundColor: theme.palette.background.paper,
