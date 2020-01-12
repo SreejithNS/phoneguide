@@ -49,7 +49,7 @@ app.post('/query', function (request, response) {
     .then(snapshot => {
       if (snapshot.empty) {
         console.log('No matching documents.');
-        response.status(503).send("No matching phones")
+        response.status(204).send("No matching phones")
         return;
       }
       var docs = [];

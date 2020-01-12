@@ -5,29 +5,31 @@ import './radioButton.css';
 import { Grid } from "@material-ui/core";
 class PaperCard extends Component {
   state = {
-    selected: "",
+    selected: this.props.question.check>1?[]:"",
     fade: false
   };
   onChange = event => {
-    let selected = event.target.value;
+    let selected = (this.props.question.check > 1)? this.state.selected.push(event.target.value)?this.state.selected:event.target.value:event.target.value
+    let option = this.props.question.options.find(opt => opt.id === event.target.value)
     this.setState({
       selected
-    });
-    let option = this.props.question.options.find(opt => opt.id === selected)
+    })
     this.props.addToQuery(option.attr)
-    setTimeout(() => this.setState({ fade: true }), 500);
-    setTimeout(() => this.props.next(this.props.question.id), 1000)
-  };
+    //setTimeout(() => this.setState({ fade: true }), 500);
+    if((this.props.question.check > 1 && this.state.selected.length===this.props.question.check)||this.props.question.check === 1) {
+      setTimeout(() => this.props.next(this.props.question.id), 1000)
+    }
+  }
   useStyles = makeStyles((theme) => createStyles({
     root: {
       backgroundColor: theme.palette.background.paper,
     },
   }));
   render() {
-    const { selected, fade } = this.state;
-    const { classes, question, offset } = this.props;
+    const { selected, /*fade*/ } = this.state;
+    const { classes, question, offset, loader,skip } = this.props;
     return (
-      <div className={classes.root} style={{ transform: `translate(${/*(fade)?"-35%":*/"-50%"},${(fade) ? "80" : offset * 200 - 200}px) scale(${offset})`, opacity: (fade) ? "0%" : "100%", filter: `blur(${fade ? "2px" : 0})`, transition: "0.5s" }}>
+      <div className={classes.root} style={{ transform: `translate(-50%,${(loader.remove) ? "80" : offset * 200 - 200}px) scale(${loader.remove ? 0.9 : offset})`, opacity: (loader.remove || skip) ? "0%" : "100%", filter: `blur(${loader.remove ? "2px" : 0},)`,scale: `${loader.remove ? 0.5 : 1}`, transition: "all 0.5s cubic-bezier(1, -0.01, 0.58, 1) 0s" }}>
         <Grid
           container
           direction="column"
@@ -37,17 +39,17 @@ class PaperCard extends Component {
         >
           <Grid item className={classes.question}>{question.question}</Grid>
           <Grid item container direction="column" justify="space-evenly" alignItems="center">
-            <form style={{ width: "100%" }}>
-              {question.options.map((opt, key) => (
-                <Grid item key={key} id={question.id + opt.id} className={classes.option} style={opt.id == selected ? { backgroundColor: "#55efc4", border: "1px solid #00000000", color: "#282828" } : {}}>
+            <form style={{ width: "100%",transition:"all 0.2s cubic-bezier(1, -0.01, 0.58, 1) 0s" }}>
+              {(!loader.load)?question.options.map((opt, key) => (
+                <Grid item key={key} id={question.id + opt.id} className={classes.option} style={selected.indexOf(opt.id)>-1? { backgroundColor: "#55efc4", border: "1px solid #00000000", color: "#282828"} : {}}>
                   <label className="btn-radio">
                     <input
                       type="radio"
                       onChange={this.onChange}
                       value={opt.id}
-                      checked={opt.id === selected}
+                      checked={selected.indexOf(opt.id)>-1}
                     />
-                    {/* <Grid container alignItems="center" justify="space-between"> */}
+                      {/* <Grid container alignItems="center" justify="space-between"> */}
                       {/* <Grid item> */}
                       {/* </Grid> */}
                       {/* <Grid item> */}
@@ -62,7 +64,7 @@ class PaperCard extends Component {
                     {/* </Grid> */}
                   </label>
                 </Grid>
-              ))}
+              )):<span className="pulse" style={!!loader.phones?{backgroundColor:"#55efc4"}:{}}></span>}
             </form>
           </Grid>
         </Grid>
@@ -85,7 +87,7 @@ export default withStyles((theme) => {
       top: '16px',
       borderRadius: "12px",
       height: "350px",
-      maxWidth: "95%"
+      maxWidth: "600px"
     },
     question: {
       fontSize: "2.1em",
@@ -112,12 +114,12 @@ export default withStyles((theme) => {
       borderRadius: "8px"
     },
     option: {
-      border: "1px solid #00000000",
-      padding: "0px 16px",
+      border: "1px solid #0000001f",
+      padding: "0.4em 16px",
       width: "100%",
       borderRadius: "30px",
-      margin: "12px 0px",
-      boxShadow: "1px 2px 7px -1px rgba(0, 0, 0, 0.12)",
+      margin: "0.4em 0px",
+      //boxShadow: "1px 2px 7px -1px rgba(0, 0, 0, 0.12)",
       transition: "0.2s",
     }
   })

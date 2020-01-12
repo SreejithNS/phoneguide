@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AppBar from '@material-ui/core/AppBar';
+// import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
+// import Typography from '@material-ui/core/Typography';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Container from '@material-ui/core/Container';
-import MenuIcon from '@material-ui/icons/Menu';
-import {/* Button, */IconButton } from '@material-ui/core';
-import { makeStyles } from '@material-ui/styles';
+// import MenuIcon from '@material-ui/icons/Menu';
+// import {/* Button, */IconButton } from '@material-ui/core';
+// import { makeStyles } from '@material-ui/styles';
 import Questions from './ui/Questions';
 
 function ElevationScroll(props) {
@@ -34,20 +34,20 @@ ElevationScroll.propTypes = {
    */
   window: PropTypes.func,
 };
-const useStyles = makeStyles(theme => ({
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
-}));
+// const useStyles = makeStyles(theme => ({
+//   menuButton: {
+//     marginRight: theme.spacing(2),
+//   },
+//   title: {
+//     flexGrow: 1,
+//   },
+// }));
 
 export default function Home(props) {
-  const classes = useStyles();
+  // const classes = useStyles();
   return (
     <React.Fragment>
-      <ElevationScroll {...props}>
+      {/* <ElevationScroll {...props}>
         <AppBar>
           <Toolbar>
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
@@ -56,10 +56,10 @@ export default function Home(props) {
             <Typography variant="h6" className={classes.title}>
               Home
             </Typography>
-            {/*<Button color="inherit">Login</Button>*/}
+            /*<Button color="inherit">Login</Button>
           </Toolbar>
         </AppBar>
-      </ElevationScroll>
+      </ElevationScroll> */}
       <Toolbar />
       <Container style={{height:100+"%"}}>
         <Questions/>

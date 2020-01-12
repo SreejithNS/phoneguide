@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto|Roboto+Condensed|Rubik&display=swap');
+
 body, html {
   margin: 0;
   width: 100%;
@@ -16,3 +18,11 @@ body, html {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+/*
+
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Rubik', sans-serif;
+<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+font-family: 'Roboto', sans-serif;
+*/
