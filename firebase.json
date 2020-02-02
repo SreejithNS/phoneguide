@@ -4,6 +4,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
+   "site": "twomintuephones",
     "public": "build",
     "ignore": [
       "firebase.json",

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import PaperCard from './PaperCard';
-import { Box, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import PhoneCard from './PhoneCard';
 import NoMatch from './NoMatch';
-
+import Typist from 'react-typist';
 export default class Questions extends Component {
     constructor() {
-        super()
+        super();
         this.state = {
             lastQueryParams: [],
             lastQueriedPhones: [],
@@ -53,7 +53,7 @@ export default class Questions extends Component {
                         ]
                     },
                     {
-                        question: "No matter what the internal sotrage is you always feel like using an extra memeory card?",
+                        question: "No matter what the internal storage is, you always feel like using an extra memory card?",
                         id: "a10",
                         check: 1,
                         options: [
@@ -108,6 +108,11 @@ export default class Questions extends Component {
                             text: "Photography",
                             id: "o2",
                             attr: { re: 3, pe: 2, st: 3, ba: 3 }
+                        },
+                        {
+                            text: "Video",
+                            id: "o3",
+                            attr: { ba: 3, st: 3, fr: 2, re: 2, pe:2}
                         },
                         {
                             text: "Social Media",
@@ -222,7 +227,7 @@ export default class Questions extends Component {
                     ]
                 },
                 {
-                    question: "How much are looking for to invest on your next phone?",
+                    question: "How much do you think you will invest on your next phone?",
                     id: "a0",
                     check: 1,
                     options: [
@@ -296,7 +301,7 @@ export default class Questions extends Component {
     sendQuery = (isLastQuestion, callback) => {
         const query = Array.from(this.state.queryParams)
         var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
-        //var url = "http://localhost:5000/phoneguide-dev/us-central1/adminAPI/query";
+        //var url = "http://localhost:5000/twominutephones/us-central1/adminAPI/query";
         //var url = "https://us-central1-phoneguide-dev.cloudfunctions.net/adminAPI/query";
         var url = "https://us-central1-twominutephones.cloudfunctions.net/adminAPI/query";
         //var url = "http://localhost:5000/twominutephones/us-central1/adminAPI/query"
@@ -319,10 +324,11 @@ export default class Questions extends Component {
         })
     }
     dynamicQuestions = () => {
-        const { questions, noMatch, phones, skipBasics, dynamicQuestions} = this.state;
+        const { questions, noMatch, phones, skipBasics, dynamicQuestions } = this.state;
         if (dynamicQuestions.questions.length === 0 && phones.length) {
             this.setState({
                 showMatch: true,
+                phones: [...phones.splice(0, 3)]
             })
             return;
         }
@@ -360,41 +366,71 @@ export default class Questions extends Component {
                     skipBasics: false
                 }
             })
-        }else if(phones.length===1){
+        } else if (phones.length === 1) {
             this.setState({
-                skipBasics:true,
-                questions:[],
-                phones:[...phones.splice(0,3)],
-                showMatch:true
+                skipBasics: true,
+                questions: [],
+                phones: [...phones.splice(0, 3)],
+                showMatch: true
             })
         }
 
 
     }
+
     render() {
         const { nextQuestion, addToQuery } = this;
         const { questions, noMatch, phones, questionLoad, skipBasics, showMatch } = this.state;
         return (
-            <Box my={2}>
-
-                    <div style={{ position: "relative" }}>
-                        {(questions.length && !showMatch) ? questions
-                            .sort((a, b) => (parseInt(a.id.replace(/[^\d.-]/g, '')) > parseInt(b.id.replace(/[^\d.-]/g, ''))) ? -1 : 1)
-                            .map((q, k) =>
-                                
-                                    <PaperCard skip={skipBasics} question={q} loader={(q.id === questionLoad.questionId) ? questionLoad : { load: false, remove: false }} offset={(parseInt(k + 5) / (questions.length + 4))} key={k} next={nextQuestion} addToQuery={addToQuery} />
-                                
-                            ) : ""}
-                    </div>
-                    <Grid container direction="row" justify="center" alignItems="center">
-                    {showMatch ?
-                        phones.map((d, key) =>
-                            <PhoneCard key={key} phone={d} />
-                        ) : ""}
-                    {noMatch ? <NoMatch /> : ""}
+            <Grid container direction="column" justify="space-evenly" alignItems="center" style={{ height: "calc(100% - 24px)" }}>
+                <Grid item style={{"background":"#fff","padding":"8px 16px","borderRadius":"8px","fontSize":"1.5em",textAlign:"center",maxWidth:"93vw"}}>
+                    <Typist stdTypingDelay={25} cursor={{blink:true,hideWhenDone:true}}>
+                        <span>Hi Buddy!</span>
+                        <Typist.Delay ms={2 * 1000} />
+                        <Typist.Backspace count={9}/>
+                        <Typist.Delay ms={1 * 1000} />
+                        <span>Welcome to <b>TwoMintuePhones.com</b></span>
+                        <Typist.Delay ms={2 * 1000} />
+                        <Typist.Backspace count={30}/>
+                        <Typist.Delay ms={1 * 1000} />
+                        <span>I can help you choose phones</span>
+                        <Typist.Delay ms={1 * 1000} />
+                        <Typist.Backspace count={6}/>
+                        <Typist.Delay ms={1 * 1000} />
+                        <span><b>best phones</b></span>
+                        <Typist.Delay ms={1 * 1000} />
+                        <span> by understanding your <b>taste</b></span>
+                        <Typist.Delay ms={3 * 1000} />
+                        <Typist.Backspace count={61}/>
+                        <Typist.Delay ms={1 * 1000} />
+                        <span style={{fontSize:"1.4em",fontFamily:"var(--font2)"}}><b>TwoMintuePhones.com</b></span>
+                    </Typist>
+                </Grid>
+                {showMatch ?
+                    <Grid item container direction="row" justify="center" alignItems="center">
+                        {phones.map((d, key) =>
+                            <PhoneCard key={key} order={key} phone={d} />
+                        )}
                     </Grid>
+                    : !noMatch ?
+                        <Grid item style={{ position: "relative", height: "500px", width: 'calc(100% - 32px)' }}>
+                            {(questions.length && !showMatch) ? questions
+                                .sort((a, b) => (parseInt(a.id.replace(/[^\d.-]/g, '')) > parseInt(b.id.replace(/[^\d.-]/g, ''))) ? -1 : 1)
+                                .map((q, k) =>
+                                    <PaperCard
+                                        skip={skipBasics}
+                                        question={q}
+                                        loader={(q.id === questionLoad.questionId) ? questionLoad : { load: false, remove: false }}
+                                        offset={(parseInt(k + 5) / (questions.length + 4))}
+                                        key={k} next={nextQuestion}
+                                        addToQuery={addToQuery}
+                                    />
+                                ) : ""}
+                        </Grid>
+                        : ""}
+                {noMatch ? <NoMatch /> : ""}
 
-            </Box>
+            </Grid>
         )
     }
 }

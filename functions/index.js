@@ -54,7 +54,7 @@ app.post('/query', function (request, response) {
       }
       var docs = [];
       snapshot.forEach(doc => docs.push(doc.data()));
-      response.status(200).send(docs)
+      response.status(200).send(docs.splice(0,10))
     })
     .catch(err => {
       console.log('Error getting documents', err);

@@ -3,6 +3,13 @@ import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { withStyles } from "@material-ui/styles";
 import './radioButton.css';
 import { Grid } from "@material-ui/core";
+import Typist from 'react-typist';
+
+function Title(props){
+  if(parseInt(props.offset)!==1) return "";
+  return (<Typist stdTypingDelay={25} cursor={{blink:true,hideWhenDone:true}}>{props.title}</Typist>)
+}
+
 class PaperCard extends Component {
   state = {
     selected: this.props.question.check>1?[]:"",
@@ -26,7 +33,7 @@ class PaperCard extends Component {
     },
   }));
   render() {
-    const { selected, /*fade*/ } = this.state;
+    const { selected} = this.state;
     const { classes, question, offset, loader,skip } = this.props;
     return (
       <div className={classes.root} style={{ transform: `translate(-50%,${(loader.remove) ? "80" : offset * 200 - 200}px) scale(${loader.remove ? 0.9 : offset})`, opacity: (loader.remove || skip) ? "0%" : "100%", filter: `blur(${loader.remove ? "2px" : 0},)`,scale: `${loader.remove ? 0.5 : 1}`, transition: "all 0.5s cubic-bezier(1, -0.01, 0.58, 1) 0s" }}>
@@ -37,10 +44,10 @@ class PaperCard extends Component {
           alignItems="center"
           style={{ height: 100 + "%" }}
         >
-          <Grid item className={classes.question}>{question.question}</Grid>
+          <Grid item className={classes.question}><Title offset={offset} title={question.question}/></Grid>
           <Grid item container direction="column" justify="space-evenly" alignItems="center">
             <form style={{ width: "100%",transition:"all 0.2s cubic-bezier(1, -0.01, 0.58, 1) 0s" }}>
-            {question.check>1? <div item className={classes.hint}>Select {question.check} options</div>:""}
+            {question.check>1? <div className={classes.hint}>Select {question.check} options</div>:""}
               {(!loader.load)?question.options.map((opt, key) => (
                 <Grid item key={key} id={question.id + opt.id} className={classes.option} style={selected.indexOf(opt.id)>-1? { backgroundColor: "#55efc4", border: "1px solid #00000000", color: "#282828"} : {}}>
                   <label className="btn-radio">
@@ -50,10 +57,6 @@ class PaperCard extends Component {
                       value={opt.id}
                       checked={selected.indexOf(opt.id)>-1}
                     />
-                      {/* <Grid container alignItems="center" justify="space-between"> */}
-                      {/* <Grid item> */}
-                      {/* </Grid> */}
-                      {/* <Grid item> */}
                         <svg width="20px" height="20px" viewBox="0 0 20 20">
                           <circle cx="10" cy="10" r="9"></circle>
                           <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z" className="inner"></path>
@@ -61,8 +64,7 @@ class PaperCard extends Component {
                         </svg>
                         
                         <span>{opt.text}</span>
-                      {/* </Grid> */}
-                    {/* </Grid> */}
+                        
                   </label>
                 </Grid>
               )):<span className="pulse" style={!!loader.phones?{backgroundColor:"#55efc4"}:{}}></span>}
@@ -97,8 +99,9 @@ export default withStyles((theme) => {
     },
     hint: {
       fontSize: "1.3em",
-      letterSpacing: "-1px",
-      color: "#282828aa",
+      letterSpacing: "1px",
+      color: "#282828",
+      paddingLeft:"12px",
       width: 100 + "%"
     },
     cardContent: {
