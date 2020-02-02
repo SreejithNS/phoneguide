@@ -7,7 +7,7 @@ import Typist from 'react-typist';
 
 function Title(props){
   if(parseInt(props.offset)!==1) return "";
-  return (<Typist stdTypingDelay={25} cursor={{blink:true,hideWhenDone:true}}>{props.title}</Typist>)
+  return (<Typist stdTypingDelay={25} avgTypingDelay={35} cursor={{blink:true,hideWhenDone:true}}>{props.title}</Typist>)
 }
 
 class PaperCard extends Component {
@@ -88,7 +88,7 @@ export default withStyles((theme) => {
       left: "50%",
       top: '16px',
       borderRadius: "12px",
-      height: "350px",
+      height: "380px",
       maxWidth: "600px"
     },
     question: {

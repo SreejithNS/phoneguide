@@ -382,8 +382,8 @@ export default class Questions extends Component {
         const { nextQuestion, addToQuery } = this;
         const { questions, noMatch, phones, questionLoad, skipBasics, showMatch } = this.state;
         return (
-            <Grid container direction="column" justify="space-evenly" alignItems="center" style={{ height: "calc(100% - 24px)" }}>
-                <Grid item style={{"background":"#fff","padding":"8px 16px","borderRadius":"8px","fontSize":"1.5em",textAlign:"center",maxWidth:"93vw"}}>
+            <React.Fragment>
+            <div style={{"background":"rgb(255, 255, 255)","padding":"8px 16px","borderRadius":"8px","fontSize":"1.5em","textAlign":"center","maxWidth":"93vw","position":"fixed","left":"50%","top":"16px","transform":"translate(-50%)"}}>
                     <Typist stdTypingDelay={25} cursor={{blink:true,hideWhenDone:true}}>
                         <span>Hi Buddy!</span>
                         <Typist.Delay ms={2 * 1000} />
@@ -405,7 +405,8 @@ export default class Questions extends Component {
                         <Typist.Delay ms={1 * 1000} />
                         <span style={{fontSize:"1.4em",fontFamily:"var(--font2)"}}><b>TwoMintuePhones.com</b></span>
                     </Typist>
-                </Grid>
+                </div>
+            <Grid container direction="column" justify="space-evenly" alignItems="center" style={{ height: "calc(100% - 24px)",overflow:"scroll",paddingTop:"105px"}}>
                 {showMatch ?
                     <Grid item container direction="row" justify="center" alignItems="center">
                         {phones.map((d, key) =>
@@ -430,7 +431,7 @@ export default class Questions extends Component {
                         : ""}
                 {noMatch ? <NoMatch /> : ""}
 
-            </Grid>
+            </Grid></React.Fragment>
         )
     }
 }

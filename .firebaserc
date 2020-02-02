@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "twominutephones"
+  },
+  "targets": {
+    "twominutephones": {
+      "hosting": {
+        "twomintuephones": [
+          "twomintuephones"
+        ],
+        "twominutephones": [
+          "twominutephones"
+        ]
+      }
+    }
   }
 }

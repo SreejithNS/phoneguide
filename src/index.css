@@ -56,6 +56,14 @@ a, a:link, a:visited, a:hover, a:focus, a:active {
   --font2: 'Roboto Condensed', sans-serif;
   --font3: 'Open Sans Condensed', sans-serif;
 }
+div::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+div {
+  -ms-overflow-style: none;
+}
 /*
 
 font-family: 'Roboto Condensed', sans-serif;
