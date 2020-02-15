@@ -69,28 +69,28 @@ export default class Questions extends Component {
                             }
                         ]
                     },
-                    {
-                        question: "Do you like phone with notch?",
-                        id: "a8",
-                        check: 1,
-                        options: [
-                            {
-                                text: "No",
-                                id: "o1",
-                                attr: {}
-                            },
-                            {
-                                text: "Water Drop",
-                                id: "o2",
-                                attr: { no: 'Waterdrop' }
-                            },
-                            {
-                                text: "Punch Hole",
-                                id: "o3",
-                                attr: { no: 'Punch Hole' }
-                            }
-                        ]
-                    }
+                    // {
+                    //     question: "Do you like phone with notch?",
+                    //     id: "a8",
+                    //     check: 1,
+                    //     options: [
+                    //         {
+                    //             text: "No",
+                    //             id: "o1",
+                    //             attr: {}
+                    //         },
+                    //         {
+                    //             text: "Water Drop",
+                    //             id: "o2",
+                    //             attr: { no: 'Waterdrop' }
+                    //         },
+                    //         {
+                    //             text: "Punch Hole",
+                    //             id: "o3",
+                    //             attr: { no: 'Punch Hole' }
+                    //         }
+                    //     ]
+                    // }
                 ],
             },
             questions: [
@@ -192,23 +192,23 @@ export default class Questions extends Component {
                         }
                     ]
                 },
-
-                // {
-                //     question: "Does branding of the phone matters to you?",
-                //     id: "a7",
-                //     options: [
-                //         {
-                //             text: "Yes",
-                //             id: "o1",
-                //             attr: { br: ['APPLE', 'GOOGLE', 'SAMSUNG', 'ONEPLUS'] }
-                //         },
-                //         {
-                //             text: "No",
-                //             id: "o2",
-                //             attr: { re: 3, fr: 3 }
-                //         }
-                //     ]
-                // },
+                {
+                    question: "Do you take videos offline to watch later?",
+                    id: "a7",
+                    check:1,
+                    options: [
+                        {
+                            text: "Yes",
+                            id: "o1",
+                            attr: { st: 4 }
+                        },
+                        {
+                            text: "No",
+                            id: "o2",
+                            attr: { }
+                        }
+                    ]
+                },
                 {
                     question: "Does thickness of the phone matters to you?",
                     id: "a9",
@@ -292,13 +292,23 @@ export default class Questions extends Component {
         this.setState(({ queryParams }) => {
             const lastQueryParams = new Map(queryParams)
             for (var i in optionParams) {
-                if (queryParams.has(i) && queryParams.get(i) < optionParams[i]) queryParams.set(i, optionParams[i])
+                if (queryParams.has(i) && queryParams.get(i) < optionParams[i]) {
+                    if(i==="pe") {
+                        queryParams.set(i,(optionParams[i]>2)?2:optionParams[i])
+                    }
+                    queryParams.set(i, optionParams[i])
+                }
                 else if (!queryParams.has(i)) queryParams.set(i, optionParams[i])
             };
             return { queryParams, lastQueryParams }
         })
     }
     sendQuery = (isLastQuestion, callback) => {
+        var queryParams = this.state.queryParams;
+        if(queryParams.has("ba") && queryParams.get("pr")==="FLAGSHIP"){ // Battery should not exceed 3 for flagship phones
+            queryParams.set("ba",(queryParams.get("ba")>3)?3:queryParams.get("ba"))
+        }
+        console.log("sendQuery():",queryParams);
         const query = Array.from(this.state.queryParams)
         var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
         //var url = "http://localhost:5000/twominutephones/us-central1/adminAPI/query";
