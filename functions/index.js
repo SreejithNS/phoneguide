@@ -49,12 +49,12 @@ app.post('/query', function (request, response) {
     .then(snapshot => {
       if (snapshot.empty) {
         console.log('No matching documents.');
-        response.status(503).send("No matching phones")
+        response.status(204).send("No matching phones")
         return;
       }
       var docs = [];
       snapshot.forEach(doc => docs.push(doc.data()));
-      response.status(200).send(docs)
+      response.status(200).send(docs.splice(0,10))
     })
     .catch(err => {
       console.log('Error getting documents', err);
@@ -100,6 +100,8 @@ function queryBuilder(ref, array) {
         return "thickness";
       case "sd":
         return "sdCardSlot";
+      case "pr":
+        return "price";
     }
   }
   const grade = (num) => {
@@ -117,16 +119,16 @@ function queryBuilder(ref, array) {
         return num;
     }
   }
-  const query = (ref, arr, i,p) => {
+  const query = (ref, arr, i, p) => {
     if (i < arr.length) {
       let param = parameter(arr[i][0])
-      let value = p||grade(arr[i][1])
+      let value = p || grade(arr[i][1])
       console.log("Log:", param, value);
       if (value) {
         // if(fromLetters(value)<4 && value !=="YES" && value !== "NO"){
         //   return query(ref.where(param, "==", value), arr, i,toLetters(fromLetters(value)+1))
         // }else{
-          return query(ref.where(param, "==", value), arr, ++i)
+        return query(ref.where(param, "==", value), arr, ++i)
         //}
       }
     } else {

@@ -3,7 +3,9 @@
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
   },
-  "hosting": {
+  "hosting": [{
+    "target": "twomintuephones",
+    "site": "twomintuephones",
     "public": "build",
     "ignore": [
       "firebase.json",
@@ -16,5 +18,21 @@
         "destination": "/index.html"
       }
     ]
-  }
+  },
+  {
+    "target": "twominutephones",
+    "site":"twominutephones",
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }]
 }

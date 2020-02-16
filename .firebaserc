@@ -1,5 +1,17 @@
 {
   "projects": {
-    "default": "phoneguide-dev"
+    "default": "twominutephones"
+  },
+  "targets": {
+    "twominutephones": {
+      "hosting": {
+        "twomintuephones": [
+          "twomintuephones"
+        ],
+        "twominutephones": [
+          "twominutephones"
+        ]
+      }
+    }
   }
 }
