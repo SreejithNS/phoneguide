@@ -54,6 +54,7 @@ app.post('/query', function (request, response) {
       }
       var docs = [];
       snapshot.forEach(doc => docs.push(doc.data()));
+      docs.sort((a, b)=>parseInt(b.antutu)-parseInt(a.antutu))
       response.status(200).send(docs.splice(0,10))
     })
     .catch(err => {
