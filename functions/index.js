@@ -123,11 +123,11 @@ function queryBuilder(ref, array) {
     if (i < arr.length) {
       let param = parameter(arr[i][0])
       let value = p || grade(arr[i][1])
-      console.log("Log:", param, value);
       if (value) {
         // if(fromLetters(value)<4 && value !=="YES" && value !== "NO"){
         //   return query(ref.where(param, "==", value), arr, i,toLetters(fromLetters(value)+1))
         // }else{
+        if(value==="APPLE") return query(ref.where(param, ">", value), arr, ++i)
         return query(ref.where(param, "==", value), arr, ++i)
         //}
       }
