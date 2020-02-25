@@ -94,9 +94,26 @@ export default class Questions extends Component {
                 ],
             },
             questions: [
+            {
+                question: "Which operating system do you prefer?",
+                id: "a1",
+                check: 1,
+                options: [
+                    {
+                        text: "Android",
+                        id: "o1",
+                        attr: {}
+                    },
+                    {
+                        text: "Apple",
+                        id: "o2",
+                        attr: { br:"APPLE" }
+                    }
+                ]
+            },
                 {
                     question: "For which purpose your phone is mostly being used?",
-                    id: "a1",
+                    id: "a2",
                     check: 1,
                     options: [
                         {
@@ -123,7 +140,7 @@ export default class Questions extends Component {
                 },
                 {
                     question: "How many apps you use at a time?",
-                    id: "a2",
+                    id: "a3",
                     check: 1,
                     options: [
                         {
@@ -145,7 +162,7 @@ export default class Questions extends Component {
                 },
                 {
                     question: "Which social media you use the most?",
-                    id: "a3",
+                    id: "a4",
                     check: 1,
                     options: [
                         {
@@ -172,7 +189,7 @@ export default class Questions extends Component {
                 },
                 {
                     question: "Do you travel a lot?",
-                    id: "a5",
+                    id: "a6",
                     check: 1,
                     options: [
                         {
@@ -194,7 +211,7 @@ export default class Questions extends Component {
                 },
                 {
                     question: "Do you take videos offline to watch later?",
-                    id: "a7",
+                    id: "a8",
                     check:1,
                     options: [
                         {
@@ -211,7 +228,7 @@ export default class Questions extends Component {
                 },
                 {
                     question: "Does thickness of the phone matters to you?",
-                    id: "a9",
+                    id: "a10",
                     check: 1,
                     options: [
                         {
