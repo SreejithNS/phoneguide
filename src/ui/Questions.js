@@ -114,7 +114,7 @@ export default class Questions extends Component {
                 {
                     question: "For which purpose your phone is mostly being used?",
                     id: "a2",
-                    check: 1,
+                    check: 2,
                     options: [
                         {
                             text: "Gaming",
