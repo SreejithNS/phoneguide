@@ -128,7 +128,6 @@ function queryBuilder(ref, array) {
         // if(fromLetters(value)<4 && value !=="YES" && value !== "NO"){
         //   return query(ref.where(param, "==", value), arr, i,toLetters(fromLetters(value)+1))
         // }else{
-        if(value==="APPLE") return query(ref.where(param, ">", value), arr, ++i)
         return query(ref.where(param, "==", value), arr, ++i)
         //}
       }
