@@ -260,7 +260,7 @@ export default class Questions extends Component {
                         },
                         {
                             text: "Above 30k",
-                            id: "o2",
+                            id: "o3",
                             attr: { pr: 'FLAGSHIP' }
                         }
                     ]
