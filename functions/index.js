@@ -135,8 +135,9 @@ function queryBuilder(ref, array) {
   return query(ref, array, 0)
 }
 
-function priceBasedQueryRefiner(params){
-  const price = params.find(parameter=>parameter[0]==="pr")[1];
+function priceBasedQueryRefiner(params){//This limits the query paramters values within the given range
+  // NOTE: This function also removes the price parameter ('pr') from the query
+  const price = params.splice(params.indexOf(params.find(parameter=>parameter[0]==="pr")),1)[1];
   const limitParamater = (param,limits)=>{
     limits = new Map(limits);
     if(limits.has(param) && param[1]>limits.get(param)){
