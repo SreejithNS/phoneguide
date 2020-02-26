@@ -42,7 +42,7 @@ app.post('/uploadData', function (request, response) {
 });
 
 app.post('/query', function (request, response) {
-  const jsonData = request.body;
+  const jsonData = priceBasedQueryRefiner(request.body);
   const db = admin.firestore().collection('phones');
   const query = queryBuilder(db, jsonData);
   query.get()
