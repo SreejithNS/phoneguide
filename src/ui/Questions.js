@@ -228,7 +228,7 @@ export default class Questions extends Component {
                 },
                 {
                     question: "Does thickness of the phone matters to you?",
-                    id: "a10",
+                    id: "a9",
                     check: 1,
                     options: [
                         {
