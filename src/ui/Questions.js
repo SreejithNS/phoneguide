@@ -249,14 +249,19 @@ export default class Questions extends Component {
                     check: 1,
                     options: [
                         {
-                            text: "A good budget",
+                            text: "Under 15k",
                             id: "o1",
-                            attr: { pr: 'FLAGSHIP' }
+                            attr: { pr: 'LOWBUDGET' }
                         },
                         {
-                            text: "To full my basic needs",
+                            text: "Under 30k",
                             id: "o2",
                             attr: { pr: 'BUDGET' }
+                        },
+                        {
+                            text: "Above 30k",
+                            id: "o2",
+                            attr: { pr: 'FLAGSHIP' }
                         }
                     ]
                 },
