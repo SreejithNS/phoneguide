@@ -126,7 +126,8 @@ function queryBuilder(ref, array) {
       let param = parameter(arr[i][0])
       let value = p || grade(arr[i][1])
       if (value) {
-        return query(ref.where(param, "==", value), arr, ++i)
+        if(value==="ANDROID") return query(ref.where(param, ">", "APPLE"), arr, ++i)
+        else return query(ref.where(param, "==", value), arr, ++i)
       }
     } else {
       return ref
@@ -136,8 +137,8 @@ function queryBuilder(ref, array) {
 }
 
 function priceBasedQueryRefiner(params){//This limits the query paramters values within the given range
-  // NOTE: This function also removes the price parameter ('pr') from the query
-  const price = params.splice(params.indexOf(params.find(parameter=>parameter[0]==="pr")),1)[1];
+  // NOTE: This function won't remove the price parameter ('pr') from the query
+  const price = params.indexOf(params.find(parameter=>parameter[0]==="pr"))[1];
   const limitParamater = (param,limits)=>{
     limits = new Map(limits);
     if(limits.has(param) && param[1]>limits.get(param)){
