@@ -334,8 +334,8 @@ export default class Questions extends Component {
         const query = Array.from(this.state.queryParams)
         var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
         //var url = "https://us-central1-phoneguide-dev.cloudfunctions.net/adminAPI/query";
-        // var url = "https://us-central1-twominutephones.cloudfunctions.net/adminAPI/query";
-        var url = "http://localhost:5000/twominutephones/us-central1/adminAPI/query"
+        var url = "https://us-central1-twominutephones.cloudfunctions.net/adminAPI/query";
+        //var url = "http://localhost:5000/twominutephones/us-central1/adminAPI/query"
         xmlhttp.open("POST", url);
         xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xmlhttp.send(JSON.stringify(query));
